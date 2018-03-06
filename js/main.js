@@ -75,11 +75,11 @@ Animation.prototype.isDone = function () {
 
 /**********************/
 function Karen(game) {
-    this.animation = new Animation(ASSET_MANAGER.getAsset("/Users/Cuong_Tran/Desktop/TCSS491/workspace/Homework1/img/karenrun.png")
+    this.animation = new Animation(ASSET_MANAGER.getAsset("img/karenrun.png")
     														,0, 0, 45, 47, 0.2, 8, true, false);
-    this.jumpAnimation = new Animation(ASSET_MANAGER.getAsset("/Users/Cuong_Tran/Desktop/TCSS491/workspace/Homework1/img/karenjump.png")
+    this.jumpAnimation = new Animation(ASSET_MANAGER.getAsset("img/karenjump.png")
     														,0,0, 38.75, 76, 0.3, 4, false, false);
-    this.punchAnimation = new Animation(ASSET_MANAGER.getAsset("/Users/Cuong_Tran/Desktop/TCSS491/workspace/Homework1/img/karenpunch.png")
+    this.punchAnimation = new Animation(ASSET_MANAGER.getAsset("img/karenpunch.png")
 			,0,0, 60, 52, 0.1, 9, false, false);
     this.jumping = false;
     this.punch = false;
@@ -141,9 +141,9 @@ Karen.prototype.draw = function (ctx) {
 //the "main" code begins here
 var ASSET_MANAGER = new AssetManager();
 
-ASSET_MANAGER.queueDownload("/Users/Cuong_Tran/Desktop/TCSS491/workspace/Homework1/img/karenjump.png");
-ASSET_MANAGER.queueDownload("/Users/Cuong_Tran/Desktop/TCSS491/workspace/Homework1/img/karenrun.png");
-ASSET_MANAGER.queueDownload("/Users/Cuong_Tran/Desktop/TCSS491/workspace/Homework1/img/karenpunch.png");
+ASSET_MANAGER.queueDownload("img/karenjump.png");
+ASSET_MANAGER.queueDownload("img/karenrun.png");
+ASSET_MANAGER.queueDownload("img/karenpunch.png");
 ASSET_MANAGER.downloadAll(function () {
     console.log("starting up da sheild");
     var canvas = document.getElementById('gameWorld');
