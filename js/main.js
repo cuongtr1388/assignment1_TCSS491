@@ -52,27 +52,6 @@ Animation.prototype.isDone = function () {
     return (this.elapsedTime >= this.totalTime);
 }
 
-//
-//if (event.button === 0) {
-//	if (event.x > 160 && event.x < 320 &&
-//	    event.y > 96 && event.y < 148) {
-//		
-//		if (event.x > 160 && event.x < 215) {
-//			
-//			that.selectedUnit = 1;
-//			that.unitHighlight.changeLoc(0);
-//		} else if (event.x > 217 && event.x < 268) {
-//			
-//			that.selectedUnit = 2;
-//			that.unitHighlight.changeLoc(1);
-//		} else if (event.x > 270 && event.x < 320) {
-//			console.log("sdfsafasfdasfdas");
-//			that.selectedUnit = 3;
-//			that.unitHighlight.changeLoc(2);
-//		}
-//		that.unitSelected = true;
-//	}
-
 /**********************/
 function Karen(game) {
     this.animation = new Animation(ASSET_MANAGER.getAsset("img/karenrun.png")
@@ -151,10 +130,6 @@ ASSET_MANAGER.downloadAll(function () {
     
     
     var gameEngine = new GameEngine();
-    //var bg = new Background(gameEngine);
-    //gameEngine.addEntity(new Background(gameEngine, ASSET_MANAGER.getAsset("/Users/Cuong_Tran/Desktop/TCSS491/workspace/Homework1/img/bg.jpg"), 800, 600));
-   // gameEngine.addEntity(bg);
-    
     var karen = new Karen(gameEngine)
     gameEngine.addEntity(karen)
     gameEngine.init(ctx);
